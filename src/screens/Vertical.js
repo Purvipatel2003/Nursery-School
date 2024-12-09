@@ -22,7 +22,9 @@ const Vertical = ({data}) => {
           renderItem={({item}) => (
             <TouchableOpacity
               style={styles.container1}
-              onPress={() => navigation.navigate(item.navigationplace)}>
+              onPress={() =>
+                navigation.navigate(item.navigationplace, {data1: item})
+              }>
               <View>
                 <Image source={item.image} style={styles.image} />
                 <View style={styles.box}>
@@ -34,25 +36,13 @@ const Vertical = ({data}) => {
                   style={styles.title}
                   numberOfLines={1}
                   ellipsizeMode="tail">
-                  {item.title}{' '}
+                  {item.title}
                 </Text>
                 <Text
                   style={styles.title1}
-                  numberOfLines={1}
+                  numberOfLines={3}
                   ellipsizeMode="tail">
                   {item.title1}
-                </Text>
-                <Text
-                  style={styles.title2}
-                  numberOfLines={1}
-                  ellipsizeMode="tail">
-                  {item.title2}
-                </Text>
-                <Text
-                  style={styles.title2}
-                  numberOfLines={1}
-                  ellipsizeMode="tail">
-                  {item.title3}
                 </Text>
               </View>
             </TouchableOpacity>

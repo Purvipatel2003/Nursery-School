@@ -69,20 +69,11 @@ const NurseriesDetail = ({route}) => {
   const {state} = route.params;
 
   console.log(state);
-  const carouselImages = state.map(item => item.url);
-  const handleImagePress = () => {
-    navigation.navigate('PhotoGallery', {images: carouselImages});
-  };
+
   const shouldRenderLine = data => {
     return data && data.length > 0;
   };
-  const renderCarouselItem = ({item}) => {
-    return (
-      <TouchableOpacity onPress={handleImagePress} style={styles.carouselItem}>
-        <Image source={item} style={styles.carouselImage} />
-      </TouchableOpacity>
-    );
-  };
+
   const NurseryDetailHeader = () => {
     return (
       <View style={styles.header}>
@@ -90,7 +81,7 @@ const NurseriesDetail = ({route}) => {
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={icons.search_icon_back} style={styles.backIcon} />
           </TouchableOpacity>
-          <Text style={styles.headerText}>{state[0]?.category1}</Text>
+          <Text style={styles.headerText}>{state?.category1}</Text>
         </View>
       </View>
     );
@@ -99,13 +90,13 @@ const NurseriesDetail = ({route}) => {
     return (
       <View style={styles.cardContainer1}>
         <View style={styles.card}>
-          <Image source={state[0]?.icon} style={styles.nurseryImage1} />
-          <Text style={styles.nurseryName1}>{state[0]?.name}</Text>
+          <Image source={state?.icon} style={styles.nurseryImage1} />
+          <Text style={styles.nurseryName1}>{state?.name}</Text>
           <Text style={styles.address} numberOfLines={2} ellipsizeMode="tail">
-            {state[0]?.addressline1}
+            {state?.addressline1}
           </Text>
           <Text style={styles.address1} numberOfLines={2} ellipsizeMode="tail">
-            {state[0]?.addressline2}
+            {state?.addressline2}
           </Text>
         </View>
         <View style={styles.cardContent}>
@@ -168,17 +159,17 @@ const NurseriesDetail = ({route}) => {
           <Text style={styles.desc1}>{Labels.contact_person_name} </Text>
         </View>
         <View>
-          <Text style={styles.detaildesc}>{state[0]?.contact}</Text>
+          <Text style={styles.detaildesc}>{state?.contact}</Text>
         </View>
-        {state[0]?.contact && <View style={styles.line}></View>}
-        {shouldRenderLine(state[0]?.features) && (
+        {state?.contact && <View style={styles.line}></View>}
+        {shouldRenderLine(state?.features) && (
           <>
             <View style={styles.wrapper1}>
-              <Image source={state[0].image} style={styles.image1} />
-              <Text style={styles.desc1}>{state[0].header} </Text>
+              <Image source={state.image} style={styles.image1} />
+              <Text style={styles.desc1}>{state.header} </Text>
             </View>
             <FlatList
-              data={state[0]?.features || []}
+              data={state?.features || []}
               renderItem={({item}) => (
                 <View style={styles.box1}>
                   <Image source={item.url} style={styles.smallImage} />
@@ -192,14 +183,14 @@ const NurseriesDetail = ({route}) => {
           </>
         )}
 
-        {shouldRenderLine(state[0]?.timings) && (
+        {shouldRenderLine(state?.timings) && (
           <>
             <View style={styles.wrapper1}>
-              <Image source={state[0].image1} style={styles.image1} />
-              <Text style={styles.desc1}>{state[0].header1} </Text>
+              <Image source={state.image1} style={styles.image1} />
+              <Text style={styles.desc1}>{state.header1} </Text>
             </View>
             <FlatList
-              data={state[0]?.timings || []}
+              data={state?.timings || []}
               renderItem={({item}) => (
                 <View style={styles.box1}>
                   <Text style={styles.desc4}>{item.day}</Text>
@@ -212,18 +203,18 @@ const NurseriesDetail = ({route}) => {
             <View style={styles.line}></View>
           </>
         )}
-        {shouldRenderLine(state[0]?.desc) && (
+        {shouldRenderLine(state?.desc) && (
           <>
             <View style={styles.wrapper1}>
-              <Image source={state[0].image2} style={styles.image1} />
-              <Text style={styles.desc1}>{state[0].header2} </Text>
+              <Image source={state.image2} style={styles.image1} />
+              <Text style={styles.desc1}>{state.header2} </Text>
             </View>
             <View>
               <Text
                 style={styles.detaildesc3}
                 numberOfLines={5}
                 ellipsizeMode="tail">
-                {state[0].desc}
+                {state.desc}
               </Text>
             </View>
           </>
@@ -255,16 +246,20 @@ const NurseriesDetail = ({route}) => {
   };
   const Carousel = () => {
     return (
-      <View style={styles.carouselSection}>
+      <TouchableOpacity
+        style={styles.carouselSection}
+        onPress={() => navigation.navigate('PhotoGallery')}>
         <FlatList
-          data={carouselImages}
-          renderItem={renderCarouselItem}
-          keyExtractor={(item, index) => index.toString()}
-          horizontal
-          pagingEnabled
+          data={state.url}
+          renderItem={({item}) => (
+            <View style={styles.carouselItem}>
+              <Image source={item} style={styles.carouselImage} />
+            </View>
+          )}
+          horizontal={true}
           showsHorizontalScrollIndicator={false}
         />
-      </View>
+      </TouchableOpacity>
     );
   };
   const SubmitButton = () => {

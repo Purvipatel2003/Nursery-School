@@ -5,10 +5,9 @@ import Colors from '../assets/Colors';
 import {useNavigation} from '@react-navigation/native';
 import Labels from '../Helper/Labels.js';
 import styles from '../Styles/HorizontalScrollStyle';
-const HorizontalScroll = ({data,header}) => {
+const HorizontalScroll = ({data, header}) => {
   const navigation = useNavigation();
-   
-  
+
   return (
     <View style={styles.featuredSection}>
       <View style={styles.sectionHeader}>
@@ -29,10 +28,15 @@ const HorizontalScroll = ({data,header}) => {
             <TouchableOpacity
               style={styles.cardContainer}
               onPress={() =>
-                navigation.navigate('NurseyDetail', {state: data})
+                navigation.navigate('NurseyDetail', {state: item})
               }>
               <Image source={item.icon} style={styles.nurseryImage} />
-              <Text style={styles.nurseryName}  numberOfLines={2} ellipsizeMode="tail">{item.name}</Text>
+              <Text
+                style={styles.nurseryName}
+                numberOfLines={2}
+                ellipsizeMode="tail">
+                {item.name}
+              </Text>
               <View style={styles.cardContent}>
                 <TouchableOpacity
                   style={[
@@ -71,7 +75,7 @@ const HorizontalScroll = ({data,header}) => {
 
                   {/* Map Button */}
                   <TouchableOpacity style={styles.button} onPress={() => {}}>
-                    <View >
+                    <View>
                       <Image
                         source={icons.map_icon}
                         style={styles.buttonIcon}

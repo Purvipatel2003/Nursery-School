@@ -32,7 +32,10 @@ export const nursery = [
     addressline2: 'Leicester, LE2 5QF',
     ratings: 4,
     isOpen: true,
-    url: require('../assets/Images/photos/Banner.png'),
+    url: [
+      require('../assets/Images/photos/Banner.png'),
+      require('../assets/Images/photos/Banner.png'),
+    ],
     category1: Labels.nursery_detail,
     contact: 'Thavam Sathasivam',
     header: Labels.features,
@@ -72,7 +75,10 @@ export const nursery = [
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
     category1: Labels.nursery_detail,
-    url: require('../assets/Images/photos/Banner.png'),
+    url: [
+      require('../assets/Images/photos/Banner.png'),
+      require('../assets/Images/photos/Banner.png'),
+    ],
     ratings: 4,
     isOpen: false,
     image: icons.feature_icon,
@@ -107,14 +113,17 @@ export const nursery = [
     id: 3,
     header3: 'Featured Nurseries',
     name: 'Happy  Kids  Nursery',
-
+    url: [
+      require('../assets/Images/photos/Banner.png'),
+      require('../assets/Images/photos/Banner.png'),
+    ],
     category: Labels.nursery,
     icon: require('../assets/Images/photos/montessary.png'),
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
     category1: Labels.nursery_detail,
     ratings: 4,
-    url: require('../assets/Images/photos/Banner.png'),
+
     image: icons.feature_icon,
     image1: icons.vector2_icon,
     contact: 'Thavam Sathasivam',
@@ -206,7 +215,10 @@ export const schools = [
     category: Labels.school,
 
     icon: require('../assets/Images/photos/school3.png'),
-    url: require('../assets/Images/photos/Banner3.png'),
+    url: [
+      require('../assets/Images/photos/Banner3.png'),
+      require('../assets/Images/photos/Banner3.png'),
+    ],
     contact: 'Graham Ellis',
     isOpen: false,
     header: Labels.features,
@@ -253,7 +265,10 @@ export const schools = [
     image: icons.feature_icon,
     image1: icons.vector2_icon,
     contact: 'Graham Ellis',
-    url: require('../assets/Images/photos/Banner3.png'),
+    url: [
+      require('../assets/Images/photos/Banner3.png'),
+      require('../assets/Images/photos/Banner3.png'),
+    ],
     category1: Labels.school_detail,
     header2: Labels.visiting,
     image2: icons.visiting_icon,
@@ -288,7 +303,10 @@ export const schools = [
     name: 'Happy  Kids  Nursery',
 
     icon: require('../assets/Images/photos/school3.png'),
-    url: require('../assets/Images/photos/Banner3.png'),
+    url: [
+      require('../assets/Images/photos/Banner3.png'),
+      require('../assets/Images/photos/Banner3.png'),
+    ],
     category1: Labels.school_detail,
     isOpen: true,
     image: icons.feature_icon,
@@ -331,7 +349,10 @@ export const Nannies = [
     icon: require('../assets/Images/photos/school3.png'),
 
     category: Labels.nannies,
-    url: require('../assets/Images/photos/Banner4.png'),
+    url: [
+      require('../assets/Images/photos/Banner4.png'),
+      require('../assets/Images/photos/Banner4.png'),
+    ],
     contact: 'Thavam Sathasivam ',
     category1: Labels.nannies_detail,
     isOpen: false,
@@ -348,7 +369,10 @@ export const Nannies = [
     category1: Labels.nannies_detail,
     icon: require('../assets/Images/photos/school4.png'),
     contact: 'Thavam Sathasivam ',
-    url: require('../assets/Images/photos/Banner4.png'),
+    url: [
+      require('../assets/Images/photos/Banner4.png'),
+      require('../assets/Images/photos/Banner4.png'),
+    ],
     isOpen: true,
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
@@ -363,7 +387,10 @@ export const Nannies = [
     category1: Labels.nannies_detail,
     icon: require('../assets/Images/photos/school3.png'),
     contact: 'Thavam Sathasivam ',
-    url: require('../assets/Images/photos/Banner4.png'),
+    url: [
+      require('../assets/Images/photos/Banner4.png'),
+      require('../assets/Images/photos/Banner4.png'),
+    ],
     isOpen: true,
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
@@ -381,7 +408,10 @@ export const Companies = [
     icon: require('../assets/Images/photos/Company1.png'),
     contact: 'Thavam Sathasivam ',
     isOpen: false,
-    url: require('../assets/Images/photos/Banner6.png'),
+    url: [
+      require('../assets/Images/photos/Banner6.png'),
+      require('../assets/Images/photos/Banner6.png'),
+    ],
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
     ratings: 4,
@@ -415,7 +445,10 @@ export const Companies = [
     name: 'Woodcroft Primary School',
     category1: Labels.company_detail,
     icon: require('../assets/Images/photos/Company2.png'),
-    url: require('../assets/Images/photos/Banner6.png'),
+    url: [
+      require('../assets/Images/photos/Banner6.png'),
+      require('../assets/Images/photos/Banner6.png'),
+    ],
     contact: 'Thavam Sathasivam ',
     isOpen: true,
     image: icons.feature_icon,
@@ -452,7 +485,10 @@ export const Companies = [
     name: 'Happy  Kids  Nursery',
     category1: Labels.company_detail,
     icon: require('../assets/Images/photos/school3.png'),
-    url: require('../assets/Images/photos/Banner6.png'),
+    url: [
+      require('../assets/Images/photos/Banner6.png'),
+      require('../assets/Images/photos/Banner6.png'),
+    ],
     isOpen: true,
     image: icons.feature_icon,
     image1: icons.vector2_icon,
@@ -491,7 +527,10 @@ export const Tutors = [
     category1: Labels.tutor_detail,
     icon: require('../assets/Images/photos/Tutor1.png'),
     contact: 'Thavam Sathasivam ',
-    url: require('../assets/Images/photos/Banner5.png'),
+    url: [
+      require('../assets/Images/photos/Banner5.png'),
+      require('../assets/Images/photos/Banner5.png'),
+    ],
     isOpen: true,
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
@@ -510,7 +549,10 @@ export const Tutors = [
     name: 'Woodcroft Primary School',
 
     icon: require('../assets/Images/photos/Tutor2.png'),
-    url: require('../assets/Images/photos/Banner5.png'),
+    url: [
+      require('../assets/Images/photos/Banner5.png'),
+      require('../assets/Images/photos/Banner5.png'),
+    ],
     isOpen: false,
     addressline1: '33-37 Wigston Road ',
     addressline2: ' Leicester, LE2 5QF',
@@ -528,7 +570,10 @@ export const Tutors = [
     category1: Labels.tutor_detail,
     name: 'Happy  Kids  Nursery',
 
-    url: require('../assets/Images/photos/Banner5.png'),
+    url: [
+      require('../assets/Images/photos/Banner5.png'),
+      require('../assets/Images/photos/Banner5.png'),
+    ],
     icon: require('../assets/Images/photos/school3.png'),
     isOpen: true,
     addressline1: '33-37 Wigston Road ',

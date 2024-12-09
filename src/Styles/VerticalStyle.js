@@ -7,8 +7,8 @@ import {
 } from 'react-native-responsive-screen';
 export default StyleSheet.create({
     container1: {
-        marginTop: hp('2%'),
-       marginLeft: wp('5%'),
+      marginTop: hp('2%'),
+       marginLeft: wp('5.75%'),
        borderRadius: 10,
        width: wp('90%'),
        height: hp('15%'),
@@ -32,14 +32,6 @@ export default StyleSheet.create({
        marginLeft: wp('4%'),
        color: Colors.black,
        maxWidth:wp(50),
-     },
-     title2: {
-       fontFamily: fonts.regular,
-       fontSize: 14,
-       maxWidth:wp(50),
-       fontWeight: '500',
-       marginLeft: wp('4%'),
-       color: Colors.black,
      },
      image:{
        width:wp('40%'),

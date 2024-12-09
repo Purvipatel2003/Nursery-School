@@ -37,6 +37,7 @@ import Vertical from '../screens/Vertical';
 import NewsCard from '../screens/NewsCard';
 import Reviewpart from '../screens/Reviewpart';
 
+
 const Stack = createStackNavigator();
 // const Tab = createBottomTabNavigator();
 
@@ -50,7 +51,7 @@ const UserAuthFlow = () => {
       <Stack.Screen name="Signup" component={Signup} />
       {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
       <Stack.Screen name="Nursery" component={Nurseries} />
-
+      
       {/* <Stack.Screen name="Nannies" component={Nannies} /> */}
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="More" component={More} />

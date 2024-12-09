@@ -5,16 +5,17 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import AutoHeightWebView from 'react-native-autoheight-webview';
 import Labels from '../Helper/Labels';
-const ChildDevelop = () => {
+const ChildDevelop = ({route}) => {
+  const {data1}=route.params;
   const navigation = useNavigation();
   const ChildDevelopHeader = () => {
     return (
-      <View style={styles.header}>
+      <View style={styles.header} >
         <View style={styles.wrapper}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={icons.search_icon_back} style={styles.backIcon} />
           </TouchableOpacity>
-          <Text style={styles.headerText}>{Labels.child_develop}</Text>
+          <Text style={styles.headerText} numberOfLines={1} ellipsizeMode="tail">{data1.title1}</Text>
         </View>
       </View>
     );

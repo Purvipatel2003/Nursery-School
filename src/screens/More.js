@@ -17,6 +17,7 @@ import {schools} from './HomeScreen';
 
 import {Tutors} from './HomeScreen';
 import Labels from '../Helper/Labels';
+
 const More = () => {
   const data1 = [
     {id: 1, name1: Labels.nursery, navigationplace: nursery},
@@ -34,6 +35,7 @@ const More = () => {
     {
       id: 5,
       name1: Labels.e_learning_school,
+     
     },
   ];
   const data2 = [

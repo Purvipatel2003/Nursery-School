@@ -15,7 +15,7 @@ export default StyleSheet.create({
         backgroundColor: Colors.primary1,
         width: wp(100),
         height: Platform.OS === 'ios' ? hp(10) : hp(7),
-    
+        
         color: Colors.white,
       },
       wrapper: {
@@ -33,6 +33,7 @@ export default StyleSheet.create({
         color: Colors.white,
         fontWeight: '500',
         fontSize: 20,
+        maxWidth:wp('60%'),
         fontFamily: fonts.regular,
       
          marginLeft: wp('16%'),
