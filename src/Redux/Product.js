@@ -2,6 +2,7 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {addToCart, removefromcart} from '../Store/Actions';
 import {useDispatch, useSelector} from 'react-redux';
+import icons from '../Helper/icons';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -36,17 +37,20 @@ const Product = props => {
       <Text style={styles.price}>{item.price}</Text>
 
       {isAdded ? (
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleRemoveCart(item)}>
-          <Text>REMOVE</Text>
-        </TouchableOpacity>
-      ) : (
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => handleAddToCart(item)}>
-          <Text>ADD</Text>
-        </TouchableOpacity>
+         <TouchableOpacity
+         style={styles.removeButton}
+         onPress={() => handleRemoveCart(item)}>
+         {/* <Icon name="minus" size={20} color="white" /> */}
+   
+         <Text style={styles.removebuttonText}>REMOVE</Text>
+       </TouchableOpacity>
+     ) : (
+       <TouchableOpacity
+         style={styles.addButton}
+         onPress={() => handleAddToCart(item)}>
+       
+         <Text style={styles.buttonText}>ADD</Text>
+       </TouchableOpacity>
       )}
     </View>
   );
@@ -57,42 +61,67 @@ export default Product;
 const styles = StyleSheet.create({
   container: {
     width: wp(42),
-    height: hp(30),
+    height: hp(40),
     marginTop: hp(2),
-    backgroundColor: 'white',
-    elevation: 3,
-    borderRadius: 10,
-    padding: 10,
+    backgroundColor: '#f8f9fa', 
+    borderRadius: 15,
+    padding: 15,
     marginHorizontal: wp(2),
+    //elevation:3,
+    alignItems: 'center',
   },
   image: {
     width: wp(36),
     height: hp(20),
-    borderRadius: 5,
-    marginTop: hp(-3),
-    resizeMode: 'contain',
-  },
-  button: {
-    backgroundColor: 'lightblue',
-    marginTop: 10,
     borderRadius: 10,
+    resizeMode: 'cover',
+  },
+  addButton: {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent:'center',
-    margin:wp(3.2),
-    fontSize: 18,
+    justifyContent: 'center',
+    backgroundColor: 'lightblue', 
+    marginTop: 10,
+    borderRadius: 20,
     width: wp(30),
-    height: hp(4),
-    padding: 5,
+    height: hp(5),
+    padding: 10,
+    
+  },
+  removeButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ff69b4', 
+    marginTop: 10,
+    borderRadius: 20,
+    width: wp(30),
+    height: hp(5),
+    padding: 10,
+    
+  },
+  buttonText: {
+    color: '#ff69b4',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  removebuttonText: {
+    color: 'lightblue',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   name: {
-    fontSize: 20,
-    textAlign:'center',
-    marginTop:hp(-2),
-    fontWeight: '600',
+    fontSize: 22,
+    textAlign: 'center',
+    marginTop: hp(1),
+    fontWeight: '700',
+    color: '#343a40', 
   },
   price: {
-    textAlign:'center',
-    fontSize: 16,
-    fontWeight:'400',
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#6c757d', 
+    marginTop: hp(0.5),
   },
 });

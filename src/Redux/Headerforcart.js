@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 20,
-    color: 'red',
+    color: '#ff69b4',
     margin:hp(1.5),
     marginLeft: wp(25),
   },

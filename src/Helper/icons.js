@@ -41,4 +41,5 @@ export default {
   add_icon: require('../assets/Images/photos/Add.png'),
   up_icon: require('../assets/Images/photos/up-arrow.png'),
   cart_icon: require('../assets/Images/photos/cart.png'),
+
 };

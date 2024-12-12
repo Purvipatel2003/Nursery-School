@@ -25,7 +25,7 @@ const Counter = props => {
   const dispatch = useDispatch();
   const Products = [
     {
-      name: 'Straberry ',
+      name: 'BlackCurrent ',
       price: '$20',
       image: require('../assets/Images/photos/IceCream1.jpg'),
     },
@@ -35,12 +35,12 @@ const Counter = props => {
       image: require('../assets/Images/photos/IceCream2.jpg'),
     },
     {
-      name: 'Straberry',
+      name: 'StrawBerry',
       price: '$20',
       image: require('../assets/Images/photos/IceCream3.jpg'),
     },
     {
-      name: 'Chololate',
+      name: 'Chocolate',
       price: '$25',
       image: require('../assets/Images/photos/IceCream4.jpg'),
     },

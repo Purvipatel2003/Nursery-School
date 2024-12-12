@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, FlatList, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  ActivityIndicator,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {
@@ -8,6 +15,7 @@ import {
 import Colors from '../assets/Colors';
 const NewsData = () => {
   const [article, setArticle] = useState([]);
+  const [loading, setLoading] = useState(true);
   const fallbackImage = `https://via.placeholder.com/200x300.png?text=No+Image`;
   const getImageSource = img => {
     if (typeof img === 'string') {
@@ -16,6 +24,7 @@ const NewsData = () => {
     return img;
   };
   const getNews = () => {
+    setLoading(true);
     axios
       .get(
         'https://newsapi.org/v2/top-headlines?country=us&apiKey=763e25fd0a9a4f3096e2514c493e458f',
@@ -31,7 +40,9 @@ const NewsData = () => {
       .catch(function (error) {
         console.log(error);
       })
-      .finally(function () {});
+      .finally(function () {
+        setLoading(false);
+      });
   };
   useEffect(() => {
     getNews();
@@ -66,11 +77,19 @@ const NewsData = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Technology News</Text>
-      <FlatList
-        data={article}
-        renderItem={renderItem}
-        keyExtractor={item => item.url}
-      />
+      {loading ? (
+        <ActivityIndicator
+          size="large"
+          color={Colors.black}
+          style={styles.loader}
+        />
+      ) : (
+        <FlatList
+          data={article}
+          renderItem={renderItem}
+          keyExtractor={item => item.url}
+        />
+      )}
     </View>
   );
 };
