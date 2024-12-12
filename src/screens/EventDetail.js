@@ -4,7 +4,7 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../Styles/EventDetailStyle';
 import Labels from '../Helper/Labels';
-import VerticalCard from './VerticalCard';
+import VerticalCard from '../Component/VerticalCard';
 const EventDetail = () => {
   const navigation = useNavigation();
 

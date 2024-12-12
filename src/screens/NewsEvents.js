@@ -4,7 +4,7 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../Styles/NewsEventStyles';
 import Labels from '../Helper/Labels';
-import VerticalCard from './VerticalCard';
+import VerticalCard from '../Component/VerticalCard';
 const NewsEvents = () => {
   const navigation = useNavigation();
 

@@ -11,7 +11,7 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../Styles/ParentStyle';
 import Labels from '../Helper/Labels';
-import Vertical from './Vertical';
+import Vertical from '../Component/Vertical';
 const ParentsGuide = () => {
   const navigation = useNavigation();
   const data = [
@@ -20,54 +20,54 @@ const ParentsGuide = () => {
       image: require('../assets/Images/photos/MaskGroup8.png'),
       title: '05 Mins Read',
       title1: 'Speech Delay in Toddlers',
-      
+
       date: '17 Jun',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
     {
       id: 2,
       image: require('../assets/Images/photos/MaskGroup9.png'),
       title: '02 Mins Read',
       title1: 'Child Developmental Milestones',
-    
+
       date: '10 Jun',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
     {
       id: 3,
       image: require('../assets/Images/photos/MaskGroup10.png'),
       title: '03 Mins Read',
       title1: 'Four Signs of A Great School',
-     
+
       date: '5 Jun',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
     {
       id: 4,
       image: require('../assets/Images/photos/MaskGroup12.png'),
       title: '05 Mins Read',
       title1: 'Four Signs of A Great School',
-     
+
       date: '29 May',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
     {
       id: 5,
       image: require('../assets/Images/photos/MaskGroup15.png'),
       title: '02 Mins Read',
       title1: 'Four Signs of A Great School',
-     
+
       date: '21 May',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
     {
       id: 6,
       image: require('../assets/Images/photos/MaskGroup5.png'),
       title: '02 Mins Read',
       title1: 'Four Signs of A Great School',
-     
+
       date: '21 May',
-      navigationplace:'ChildDevelop',
+      navigationplace: 'ChildDevelop',
     },
   ];
   const ParentsGuideHeader = () => {
@@ -85,7 +85,7 @@ const ParentsGuide = () => {
   return (
     <View style={styles.container}>
       {ParentsGuideHeader()}
-      <Vertical data={data}/>
+      <Vertical data={data} />
     </View>
   );
 };

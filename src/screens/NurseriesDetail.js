@@ -9,14 +9,14 @@ import {
 import React, {useState} from 'react';
 import Colors from '../assets/Colors.js';
 import icons from '../Helper/icons';
-import styles from '../Styles/NurseryDetailStyle';
 
+import styles from '../Styles/NurseryDetailStyle';
 import {useNavigation} from '@react-navigation/native';
 import {Rating} from 'react-native-ratings';
 import {nursery} from './HomeScreen.js';
 import Labels from '../Helper/Labels.js';
 
-const NurseriesDetail = ({route}) => {
+const NurseriesDetail = ({route,props}) => {
   // const props = route.params.nursery;
   // // console.log(props);
 
@@ -51,7 +51,7 @@ const NurseriesDetail = ({route}) => {
       id: 7,
       url: icons.staff_icon,
       name1: 'Staff',
-      navigationplace: ' ',
+      navigationplace: 'Counter',
     },
     {
       id: 8,
@@ -282,7 +282,7 @@ const NurseriesDetail = ({route}) => {
         {HorizontalCard()}
         {Description()}
         {VerticalCard()}
-        {Buttons()}
+        {Buttons() }
       </ScrollView>
       {SubmitButton()}
     </View>

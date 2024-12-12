@@ -11,7 +11,7 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../Styles/BlogStyle';
 import Labels from '../Helper/Labels';
-import Vertical from './Vertical';
+import Vertical from '../Component/Vertical';
 
 const Blogs = () => {
   const navigation = useNavigation();
@@ -21,54 +21,54 @@ const Blogs = () => {
       image: require('../assets/Images/photos/MaskGroup1.png'),
       title: '05 Mins Read',
       title1: 'Educational Technology: The Advantages and Disadvantages',
-      
+
       date: '17 Jun',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
     {
       id: 2,
       image: require('../assets/Images/photos/MaskGroup2.png'),
       title: '02 Mins Read',
       title1: 'Tips for Transitioning from Early Years Settings to School',
-      
+
       date: '10 Jun',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
     {
       id: 3,
       image: require('../assets/Images/photos/MaskGroup4.png'),
       title: '03 Mins Read',
       title1: 'How to Pick the Perfect Nanny for Your Child ',
-     
+
       date: '5 Jun',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
     {
       id: 4,
       image: require('../assets/Images/photos/MaskGroup5.png'),
       title: '05 Mins Read',
       title1: 'How to Pick the Perfect Nanny for Your Child ',
-     
+
       date: '29 May',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
     {
       id: 5,
       image: require('../assets/Images/photos/MaskGroup6.png'),
       title: '02 Mins Read',
       title1: 'How to Pick the Perfect Nanny for Your Child ',
-     
+
       date: '21 May',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
     {
       id: 6,
       image: require('../assets/Images/photos/MaskGroup7.png'),
       title: '04 Mins Read',
       title1: 'How to Pick the Perfect Nanny for Your Child ',
-   
+
       date: '19 May',
-      navigationplace:'BlogDetail',
+      navigationplace: 'BlogDetail',
     },
   ];
 
@@ -86,11 +86,11 @@ const Blogs = () => {
       </>
     );
   };
-  
+
   return (
     <View style={styles.container}>
       {BlogHeader()}
-     <Vertical data={data}/>
+      <Vertical data={data} />
     </View>
   );
 };

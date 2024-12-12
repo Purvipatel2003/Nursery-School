@@ -5,7 +5,7 @@ import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 
 import Labels from '../Helper/Labels';
-import Reviewpart from './Reviewpart';
+import Reviewpart from '../Component/Reviewpart';
 
 const Reviews = () => {
   const navigation = useNavigation();

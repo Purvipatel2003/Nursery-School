@@ -11,7 +11,7 @@ import styles from '../Styles/LatestReviewStyle';
 import icons from '../Helper/icons';
 import {useNavigation} from '@react-navigation/native';
 import {Rating} from 'react-native-ratings';
-import Reviewpart from './Reviewpart';
+import Reviewpart from '../Component/Reviewpart';
 const LatestReview = () => {
   const navigation = useNavigation();
 

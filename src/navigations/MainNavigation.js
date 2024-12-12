@@ -31,12 +31,17 @@ import EventDetail from '../screens/EventDetail';
 import Contact from '../screens/Contact';
 import ChildDevelop from '../screens/ChildDevelop';
 import NewsEvents from '../screens/NewsEvents';
-import VerticalCard from '../screens/VerticalCard';
-import HorizontalScroll from '../screens/HorizontalScroll';
-import Vertical from '../screens/Vertical';
-import NewsCard from '../screens/NewsCard';
-import Reviewpart from '../screens/Reviewpart';
+import VerticalCard from '../Component/VerticalCard';
+import HorizontalScroll from '../Component/HorizontalScroll';
+import Vertical from '../Component/Vertical';
+import NewsCard from '../Component/NewsCard';
+import Reviewpart from '../Component/Reviewpart';
 
+import userList from '../Redux/userList';
+import NewsData from '../Redux/NewsData';
+import Product from '../Redux/Product';
+import Headerforcart from '../Redux/Headerforcart';
+import Counter from '../Redux/Counter';
 
 const Stack = createStackNavigator();
 // const Tab = createBottomTabNavigator();
@@ -51,14 +56,14 @@ const UserAuthFlow = () => {
       <Stack.Screen name="Signup" component={Signup} />
       {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
       <Stack.Screen name="Nursery" component={Nurseries} />
-      
+      <Stack.Screen name="Counter" component={Counter} />
       {/* <Stack.Screen name="Nannies" component={Nannies} /> */}
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="More" component={More} />
-
+      <Stack.Screen name="Headerforcart" component={Headerforcart} />
       <Stack.Screen name="Filter" component={Filter} />
       <Stack.Screen name="NurseyDetail" component={NurseriesDetail} />
-
+      <Stack.Screen name="Product" component={Product} />
       <Stack.Screen name="ReviewPart" component={Reviewpart} />
       <Stack.Screen name="Review" component={Reviews} />
       <Stack.Screen name="NewsCard" component={NewsCard} />
@@ -80,6 +85,8 @@ const UserAuthFlow = () => {
       <Stack.Screen name="ChildDevelop" component={ChildDevelop} />
       <Stack.Screen name="VerticalCard" component={VerticalCard} />
       <Stack.Screen name="Vertical" component={Vertical} />
+      <Stack.Screen name="userList" component={userList} />
+      <Stack.Screen name="NewsData" component={NewsData} />
       <Stack.Screen name="HorizontalScroll" component={HorizontalScroll} />
     </Stack.Navigator>
   );

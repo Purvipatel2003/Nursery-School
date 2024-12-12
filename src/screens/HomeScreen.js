@@ -15,8 +15,8 @@ import icons from '../Helper/icons';
 import styles from '../Styles/HomeScreenStyle.js';
 import {useNavigation} from '@react-navigation/native';
 import Labels from '../Helper/Labels.js';
-import HorizontalScroll from './HorizontalScroll.js';
-import VerticalScroll from './VerticalScroll.js';
+import HorizontalScroll from '../Component/HorizontalScroll.js';
+import VerticalScroll from '../Component/VerticalScroll.js';
 
 const {width} = Dimensions.get('window');
 

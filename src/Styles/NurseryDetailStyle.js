@@ -303,10 +303,10 @@ export default StyleSheet.create({
     flexDirection: 'row',
     paddingTop: hp('2.75%'),
     justifyContent: 'space-around',
-    elevation: 10, // Elevation for Android shadow (you can adjust the value)
-    shadowColor: Colors.black, // Shadow color
-    shadowOffset: {width: 0, height: -1}, // Horizontal and vertical offset of the shadow
-    shadowOpacity: 3, // Opacity of the shadow
+    elevation: 10, 
+    shadowColor: Colors.black, 
+    shadowOffset: {width: 0, height: -1}, 
+    shadowOpacity: 3, 
     shadowRadius: 6,
     alignItems: 'center',
   },

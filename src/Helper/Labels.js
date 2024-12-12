@@ -10,7 +10,6 @@ export default Labels = {
   message:'Message',
   submit_review:'Submit Review',
   blogs:'Blogs',
-  child_develop:'Child Developmental...',
   contact_us:'Contact us',
   company_name:'Company Name',
   phone_number:'Phone Number',

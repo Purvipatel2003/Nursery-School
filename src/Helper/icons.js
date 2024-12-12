@@ -40,4 +40,5 @@ export default {
   twitter_icon: require('../assets/Images/photos/twitter.png'),
   add_icon: require('../assets/Images/photos/Add.png'),
   up_icon: require('../assets/Images/photos/up-arrow.png'),
+  cart_icon: require('../assets/Images/photos/cart.png'),
 };

@@ -33,7 +33,7 @@ export default StyleSheet.create({
         color: Colors.white,
         fontWeight: '500',
         fontSize: 20,
-        maxWidth:wp('60%'),
+        maxWidth:wp('70%'),
         fontFamily: fonts.regular,
       
          marginLeft: wp('16%'),

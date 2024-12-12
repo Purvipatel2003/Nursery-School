@@ -1,10 +1,10 @@
 import {View, Text, TouchableOpacity, Image, FlatList} from 'react-native';
 import React from 'react';
-import icons from '../Helper/icons';
-import Colors from '../assets/Colors';
+import icons from '../Helper/icons.js';
+import Colors from '../assets/Colors.js';
 import {useNavigation} from '@react-navigation/native';
 import Labels from '../Helper/Labels.js';
-import styles from '../Styles/HorizontalScrollStyle';
+import styles from '../Styles/HorizontalScrollStyle.js';
 const HorizontalScroll = ({data, header}) => {
   const navigation = useNavigation();
 
