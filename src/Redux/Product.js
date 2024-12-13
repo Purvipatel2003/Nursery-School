@@ -37,20 +37,19 @@ const Product = props => {
       <Text style={styles.price}>{item.price}</Text>
 
       {isAdded ? (
-         <TouchableOpacity
-         style={styles.removeButton}
-         onPress={() => handleRemoveCart(item)}>
-         {/* <Icon name="minus" size={20} color="white" /> */}
-   
-         <Text style={styles.removebuttonText}>REMOVE</Text>
-       </TouchableOpacity>
-     ) : (
-       <TouchableOpacity
-         style={styles.addButton}
-         onPress={() => handleAddToCart(item)}>
-       
-         <Text style={styles.buttonText}>ADD</Text>
-       </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.removeButton}
+          onPress={() => handleRemoveCart(item)}>
+          {/* <Icon name="minus" size={20} color="white" /> */}
+
+          <Text style={styles.removebuttonText}>REMOVE</Text>
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity
+          style={styles.addButton}
+          onPress={() => handleAddToCart(item)}>
+          <Text style={styles.buttonText}>ADD</Text>
+        </TouchableOpacity>
       )}
     </View>
   );
@@ -60,10 +59,13 @@ export default Product;
 
 const styles = StyleSheet.create({
   container: {
+   
+     borderColor:'lightblue',
+    borderWidth:1,
     width: wp(42),
     height: hp(40),
     marginTop: hp(2),
-    backgroundColor: '#f8f9fa', 
+    backgroundColor: '#f8f9fa',
     borderRadius: 15,
     padding: 15,
     marginHorizontal: wp(2),
@@ -80,25 +82,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'lightblue', 
+    backgroundColor: 'lightblue',
     marginTop: 10,
     borderRadius: 20,
     width: wp(30),
     height: hp(5),
     padding: 10,
-    
   },
   removeButton: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ff69b4', 
+    backgroundColor: '#ff69b4',
     marginTop: 10,
     borderRadius: 20,
     width: wp(30),
     height: hp(5),
     padding: 10,
-    
   },
   buttonText: {
     color: '#ff69b4',
@@ -115,13 +115,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp(1),
     fontWeight: '700',
-    color: '#343a40', 
+    color: '#343a40',
   },
   price: {
     textAlign: 'center',
     fontSize: 18,
     fontWeight: '500',
-    color: '#6c757d', 
+    color: '#6c757d',
     marginTop: hp(0.5),
   },
 });
